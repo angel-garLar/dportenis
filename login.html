@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - BIBLIOWEB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Garamond&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            background-color: #ffffff;
+            color: #15297c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        header {
+            padding: 20px;
+            text-align: left;
+            width: 100%;
+            border-bottom: 1px solid #e8f5ff;
+        }
+        header h1 {
+            cursor: pointer;
+            font-family: 'Roboto Slab', serif;
+            margin: 0;
+            color: #15297c;
+            font-size: 24px;
+        }
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #e8f5ff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-family: 'Roboto Slab', serif;
+            color: #15297c;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #e8f5ff;
+            border-radius: 5px;
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+        }
+        .login-container input[type="submit"] {
+            background-color: #0cbccc;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #2898ee;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            width: 100%;
+            background-color: #f8f8f8;
+            border-top: 1px solid #e8f5ff;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 onclick="window.location.href='index.php'">BIBLIOWEB</h1>
+</header>
+
+<div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form action="process_login.php" method="POST">
+        <input type="text" name="username" placeholder="Usuario" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <input type="submit" value="Ingresar">
+    </form>
+</div>
+
+<footer>
+    <p>© 2024 BIBLIOWEB. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
